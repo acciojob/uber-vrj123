@@ -9,7 +9,7 @@ import java.util.List;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int customerId;
     private String mobile;
     private String password;
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
@@ -18,12 +18,12 @@ public class Customer {
     public Customer() {
     }
 
-    public int getId() {
-        return id;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getMobile() {
